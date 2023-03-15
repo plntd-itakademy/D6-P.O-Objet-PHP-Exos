@@ -7,12 +7,14 @@ class Banque implements BanqueInterface
     private $numeroCompte;
     private $solde;
 
+    // La fonction __construct en est private afin de ne pas pouvoir l'utiliser en dehors de la class
     private function __construct($numeroCompte, $solde)
     {
         $this->numeroCompte = $numeroCompte;
         $this->solde = $solde;
     }
 
+    // Fonction appelée en dehors de la class qui vérifie si un compte n'a pas déjà été instanciée (singleton)
     public static function getInstance($numeroCompte, $solde)
     {
         if (Self::$compteUnique === null) {

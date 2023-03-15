@@ -1,12 +1,7 @@
 <?php
-require_once 'RegimeAlimentaire.php';
 
 class Espece
 {
-    private $nom;
-    private $nombreDeMembre;
-
-    public function __construct()
-    {
-    }
+    protected $nom_espece;
+    protected $nombreDeMembre_espece;
 }

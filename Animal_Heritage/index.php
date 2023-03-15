@@ -1,4 +1,16 @@
 <?php
 require_once 'classes/Animal.php';
 
-var_dump(new Animal());
+$animals = [
+    new Animal(),
+    new Animal(),
+    new Animal(),
+    new Animal()
+];
+
+$animals[0]->setNom('Girafe');
+$animals[1]->setNom('Singe');
+
+echo '<pre>';
+echo $animals[0];
+echo '</pre>';
